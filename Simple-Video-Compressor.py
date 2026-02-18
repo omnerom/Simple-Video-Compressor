@@ -41,7 +41,7 @@ def get_resolution(res_str):
 
 def generate_output_path(input_path, output_dir):
     base, ext = os.path.splitext(os.path.basename(input_path))
-    output_path = os.path.join(output_dir, f"{base} - (Processed){ext}")
+    output_path = os.path.join(output_dir, f"{base} - (Compressed){ext}")
     return output_path
 
 
@@ -359,7 +359,7 @@ class VideoPlayerFrame(tk.Frame):
 class VideoCompressorApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Video Processor")
+        self.root.title("Simple Video Compressor")
         self.root.geometry("800x700")
 
         self.video_duration = 0
